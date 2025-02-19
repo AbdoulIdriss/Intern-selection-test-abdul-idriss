@@ -1,0 +1,53 @@
+<div class="max-w-2xl mx-auto p-4">
+  <h1 class="text-3xl font-bold mb-8 text-center text-blue-600">Todo List</h1>
+  
+  <div class="flex gap-2 mb-6">
+    <input 
+      type="text" 
+      [(ngModel)]="newTodoTitle"
+      (keyup.enter)="addTodo()"
+      placeholder="Add a new task..."
+      class="flex-1 p-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+    >
+    <button
+      (click)="addTodo()"
+      class="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors"
+    >
+      Add
+    </button>
+  </div>
+
+  <div class="space-y-2">
+    @for (todo of todos; track todo.id) {
+      <div 
+        class="flex items-center gap-3 p-3 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow"
+      >
+        <input 
+          type="checkbox" 
+          [checked]="todo.completed"
+          (change)="toggleTodo(todo.id)"
+          class="w-4 h-4 text-blue-600"
+        >
+        <span 
+          [class.line-through]="todo.completed"
+          [class.text-gray-400]="todo.completed"
+          class="flex-1"
+        >
+          {{ todo.title }}
+        </span>
+        <button
+          (click)="deleteTodo(todo.id)"
+          class="p-1 text-red-500 hover:text-red-600 transition-colors"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+    } @empty {
+      <div class="text-center text-gray-500 py-4">
+        No tasks found. Add your first task!
+      </div>
+    }
+  </div>
+</div>

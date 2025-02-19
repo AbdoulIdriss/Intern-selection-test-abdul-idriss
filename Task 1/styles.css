@@ -1,0 +1,164 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 1rem 2rem;
+  }
+  
+  .logo {
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+  }
+  
+  .nav-links li {
+    margin-left: 1rem;
+  }
+  
+  .nav-links a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0.5rem;
+  }
+  
+  .nav-links a:hover {
+    background-color: #555;
+    border-radius: 4px;
+  }
+  
+  .hero-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 60vh;
+    text-align: center;
+    background: url("https://prod.cdn-medias.jeuneafrique.com/cdn-cgi/image/q=auto,f=auto,metadata=none,width=1280,height=720,fit=cover,gravity=0.1475x0.3814/https://prod.cdn-medias.jeuneafrique.com/medias/2024/12/06/jad20241206-eco-camairco-releve-la-tete.jpg") no-repeat center center/cover;
+    color: #fff;
+  }
+  
+  .hero-section h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: green;
+  }
+  
+  .hero-section p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    color: red;
+  }
+  
+  #cta-button {
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    background-color: yellow;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  #cta-button:hover {
+    background-color: #ff8533;
+  }
+  
+  .features-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 2rem;
+    background-color: #f9f9f9;
+  }
+  
+  .feature-block {
+    flex: 1 1 300px;
+    margin: 1rem;
+    background-color: #fff;
+    padding: 1.5rem;
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+  
+  .feature-block h2 {
+    margin-bottom: 1rem;
+  }
+  
+  .contact-section {
+    padding: 2rem;
+    background-color: #f2f2f2;
+    text-align: center;
+  }
+  
+  .contact-section form {
+    max-width: 400px;
+    margin: 0 auto;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .contact-section label {
+    margin-bottom: 0.5rem;
+  }
+  
+  .contact-section input[type="text"],
+  .contact-section input[type="email"] {
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .contact-section button[type="submit"] {
+    padding: 0.75rem 1.5rem;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  
+  .contact-section button[type="submit"]:hover {
+    background-color: #555;
+  }
+  
+  /* Responsive Media Queries */
+  @media (max-width: 768px) {
+    .navbar {
+      flex-direction: column;
+    }
+  
+    .nav-links {
+      flex-direction: column;
+      margin-top: 1rem;
+    }
+  
+    .features-section {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .hero-section h1 {
+      font-size: 2rem;
+    }
+  }
